@@ -1,6 +1,6 @@
 package miPrincipal;
 public class Conjunto {
-	static int M = 20; //Aumento de la capacidad
+	static int M = 20;
 	private Object cto[];
 	private int cardinal;
 	private int capacidad;
@@ -11,22 +11,19 @@ public class Conjunto {
 		cardinal = 0;
 		capacidad = M;
 	}
-	//determina si el conjunto esta vacio
+	//Determinar si el conjunto esta vacio
 	public boolean esVacio()
 	{
 	   return (cardinal == 0);
 	}
-	//añade un elemento si no está en el conjunto
+	//Añadir un elemento si no está en el conjunto
 	public Conjunto añadir(Object elemento)
 	{
-		//coloque aquí el código faltante
 		{
 			Conjunto c = new Conjunto();
 			if (!pertenece(elemento))
 			{
-				/*Verifica si hay posiciones libres
-				* en caso contrario amplia el conjunto
-				*/
+				//Verificar si hay posiciones libres, en caso contrario amplia el conjunto
 				if(cardinal ==capacidad)
 				{
 					Object [] nuevoCto;
@@ -35,21 +32,17 @@ public class Conjunto {
 					nuevoCto[k] = cto[k];
 					capacidad += M;
 					cto = nuevoCto;
-					
 				}
 				cto[cardinal++] = elemento;
 				c.cto = cto;
 			}
 			return c;
-		}
-		
-		
+		}		
 	}
-	//quita el elemento del conjunto
+	//Quitar el elemento del conjunto
 
 	public Conjunto retirar(Object elemento)
 	{
-		//coloque aquí el código faltante
 		Conjunto c = new Conjunto();
 
 		if(pertenece(elemento))
@@ -57,11 +50,7 @@ public class Conjunto {
 			int k = 0;
 			while (!cto[k].equals(elemento))
 			   k++;
-			/* desde el elemento k hasta la última
-			posición
-			* mueve los elementos una posición a la
-			izquierta
-			*/
+			// desde el elemento k hasta la última posición mueve los elementos una posición a la izquierda
 			for(;k<cardinal;k++)
 			   cto[k] = cto[k+1];
 			cardinal--;
@@ -69,10 +58,9 @@ public class Conjunto {
 		}
 		return c;
 	}
-	//busca si un elemento pertenece al conjunto
+	//Buscar si un elemento pertenece al conjunto
 	public boolean pertenece(Object elemento)
 	{
-		//coloque aquí el código faltante
 		int k = 0;
 		boolean encontrado = false;
 		while (k<cardinal && !encontrado)
@@ -82,7 +70,7 @@ public class Conjunto {
 		}
 		return encontrado;
 	}
-	//devuelve el número de elementos
+	//Devolver el número de elementos
 	public int cardinal()
 	{
 		return this.cardinal;
@@ -118,5 +106,4 @@ public class Conjunto {
 		s += "}";
 		return s;
 	}
-
 }

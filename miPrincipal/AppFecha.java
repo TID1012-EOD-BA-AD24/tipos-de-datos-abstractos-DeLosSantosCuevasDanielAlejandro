@@ -7,11 +7,13 @@ public class AppFecha{
         Fecha f1 = new Fecha(2,11,1970);
 		Fecha f2 = new Fecha("2/11/1970");
 		
-		//imprimir el día
+		//Imprimir el día
 		System.out.println("Dia = "+f1.getDia());
-		//imprimimos el mes
+
+		//Imprimir el mes
 		System.out.println("Mes = "+f1.getMes());
-		//imprimimos el año
+
+		//Imprimir el año
 		System.out.println("Año = "+f1.getAnio());
 		System.out.println(f2);
 		if (f1.equals(f2))
@@ -19,9 +21,6 @@ public class AppFecha{
 		else
 			System.out.println("Son Diferentes");
 		f2 = f1.addDias(360+30+1);
-		System.out.println(f2);
-
-
-        
+		System.out.println(f2);        
     }
 }

@@ -1,6 +1,5 @@
 package miPrincipal;
 
-
 public class Cadena  {
     private char cadena[] = new char[80];
     private int tamanio = 0;
@@ -20,7 +19,6 @@ public class Cadena  {
         cadena[tamanio]=' ';
         tamanio--;
         System.out.println("valor de tamano"+tamanio);
-
     }
     public void agregarFinal(char c) throws PosicionIlegalException{
         if (tamanio>=TOPE)
@@ -35,19 +33,14 @@ public class Cadena  {
         {
             throw new PosicionIlegalException(); 
         }
-        
-
         cadena[tamanio++]=c;
-        
     }
     public boolean vacia(){
         return (tamanio==0);
-    
     }
     public boolean llena(){
         return (tamanio==TOPE);
     }
-    
     public Cadena invertir() throws PosicionIlegalException{
         Cadena invertida = new Cadena();
         for (int i=tamanio-1;i>=0;i--)
@@ -55,10 +48,7 @@ public class Cadena  {
             invertida.agregarFinal(cadena[i]);
         }
         return invertida;
-
     }
-    
-
     public char[] getCadena() {
         return cadena;
     }
@@ -66,7 +56,6 @@ public class Cadena  {
        
         return tamanio;
     }
-    
     @Override
     public String toString() {
         String cadenita="";
@@ -75,10 +64,6 @@ public class Cadena  {
         {
             cadenita = cadenita+cadena[i];
         }
-        return cadenita;
-        
+        return cadenita;   
     }
-    
-   
-    
 }

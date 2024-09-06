@@ -9,13 +9,13 @@ public class AppPoligono {
         System.out.println("==================================");
         
         Scanner entrada = new Scanner(System.in);
-		System.out.print("Dame lados del Poligono:");
+		System.out.print("Dame los lados del poligono:");
 		int N=entrada.nextInt();
         Poligono poligono = new Poligono(N);
 		poligono.LeerDatos();
 		poligono.DesplegarArreglo();
 		System.out.println("Perimetro = "+poligono.calcularPerimetro());
         
+        entrada.close();
     }
-
 }

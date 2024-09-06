@@ -66,7 +66,4 @@ public class Cuenta_Cheques {
    public void setSucursal(String sucursal) {
        this.sucursal = sucursal;
    }
-   
-    
-    
 }

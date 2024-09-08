@@ -18,9 +18,7 @@ public class Numerote {
     
     public Numerote(int n) {
     	String cadenaValor = String.valueOf(n);
-    	// Convertir la cadena a un array de dígitos
-	
-        //coloca aqui el código faltante
+
 		numeros = new int[cadenaValor.length()];
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = cadenaValor.charAt(i) - '0';
@@ -28,8 +26,6 @@ public class Numerote {
     	
     }
     public Numerote(String n) {
-    	// Convertir la cadena a un array de dígitos
-        //coloca aqui el código faltante
 		
         numeros = new int[n.length()];
         for (int i = 0; i < numeros.length; i++) {

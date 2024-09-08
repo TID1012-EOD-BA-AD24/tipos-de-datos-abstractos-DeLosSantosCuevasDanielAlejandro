@@ -28,9 +28,9 @@ public class AppRational{
 
         System.out.println(r2);
        
-        System.out.println("Suma = "+r1.toString()+"+"+r2.toString()+"="+r1.add(r1,r2));
-        System.out.println("Multiplicacion = "+r1.toString()+"*"+r2.toString()+"="+r1.mult(r1,r2));
-        System.out.println("¿Son Iguales? ="+r1+"== "+r2+r1.equal(r1,r2)); 
+        System.out.println("Suma = "+r1.toString()+" + "+r2.toString()+" = "+r1.add(r1,r2));
+        System.out.println("Multiplicacion = "+r1.toString()+" * "+r2.toString()+" = "+r1.mult(r1,r2));
+        System.out.println("¿Son Iguales? = "+r1+" == "+r2+r1.equal(r1,r2)); 
 
         consola.close();
     }

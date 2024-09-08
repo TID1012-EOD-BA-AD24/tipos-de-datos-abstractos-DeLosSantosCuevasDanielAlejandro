@@ -4,7 +4,7 @@ public class Persona {
     private String dni;
     private String nombre;
     private Fecha FechaNacimiento;
-    //coloca aquí el código faltante
+    
     public Persona() {
     }
     public Persona(String dni, String nombre, Fecha fechaNacimiento) {
@@ -31,7 +31,8 @@ public class Persona {
         FechaNacimiento = fechaNacimiento;
     }
 
-    
-    
-    
+    @Override
+    public String toString() {
+        return "Persona [dni=" + dni + ", nombre=" + nombre + ", FechaNacimiento=" + FechaNacimiento + "]";
+    }
 }
